@@ -1,7 +1,13 @@
 #include <iostream>
+#include "../include/deckOfCards.hpp"
 using namespace std;
 
 int main() {
-    std::cout << "Hello World" << std::endl;
-    return 0;
+   Deck deck;
+   deck.fill();
+   Deck lol = Deck(3);
+   lol.fill();
+
+   deck.printDeck();
+
 }
