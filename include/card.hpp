@@ -1,12 +1,11 @@
-#ifndef DECKOFCARDS_HPP
-#define DECKOFCARDS_HPP
+#ifndef CARD_HPP
+#define CARD_HPP
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
 #include <random>
 #include <array>
-
 
 enum SUITS {
     HEARTS = 1,
@@ -37,9 +36,6 @@ static const std::vector<std::string> RANK_NAMES{"?", "ACE", "TWO", "THREE", "FO
 
 
 
-
-
-
 class Card
 {
 public:
@@ -63,23 +59,4 @@ private:
 
 };
 
-class Deck
-{
-public:
-    Deck(int multiplier = 1);
-    void fill();
-
-    // Combining decks
-    //Deck(std::vector<Deck> decks);
-
-    virtual ~Deck();
-    void shuffle();
-    void printDeck();
-
-private:
-    std::vector<Card> deck_;
-    int multi_ = 1;
-
-};
-
-#endif //DECKOFCARDS_HPP
+#endif // CARD_HPP

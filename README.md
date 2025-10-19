@@ -7,7 +7,7 @@ Simppeli blackjack kortti peli, missä jakaja ja pelaaja. OOP
 - Deck.hh
 - Player.hh
 - Dealer.hh
-Katso mallia ohjelmointi 3 kurssin tehtävistä (vältä AI)
+Katso mallia ohjelmointi 3 kurssin tehtävistä (vältä AI logiikan suunnittelussa)
 
 ### 2. Jatkuu...
 

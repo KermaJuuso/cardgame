@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/deckOfCards.hpp"
+#include "../include/deck.hpp"
 using namespace std;
 
 int main() {
