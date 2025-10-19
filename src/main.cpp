@@ -5,8 +5,7 @@ using namespace std;
 int main() {
    Deck deck;
    deck.fill();
-   Deck lol = Deck(3);
-   lol.fill();
+   //deck.shuffle();
 
    deck.printDeck();
 

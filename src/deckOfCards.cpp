@@ -4,15 +4,7 @@
 Card::Card(SUITS suit, RANKS rank):
     suit_(suit), rank_(rank)
 {
-
-    if(rank > 1 && rank < 11){
-        value_ = rank;
-    } else if (rank > 10)
-    {
-        value_ = 10;
-    } 
-    // CONTINUE HERE TOMORROW
-    
+   setValue(rank);
 }
 
 
@@ -26,6 +18,18 @@ void Card::setRank(RANKS r)
     rank_ = r;
 }
 
+void Card::setValue(RANKS r)
+{
+    if(r > 1 && r < 11){
+        value_ = r;
+    } else if (r > 10)
+    {
+        value_ = 10;
+    }  else if (r == 1){
+        value_ = 11;
+    }
+}
+
 SUITS Card::getSuit() const
 {
     return suit_;
@@ -35,6 +39,20 @@ RANKS Card::getRank() const
 {
     return rank_;
 }
+
+int Card::getValue() const
+{
+    return value_;
+}
+
+std::string Card::getName()
+{
+    return RANK_NAMES[rank_] + " OF " + SUIT_NAMES[suit_];
+}
+
+
+
+// -------------------------------DECK-------------------------------
 
 Deck::Deck(int multiplier):
     multi_(multiplier)
@@ -64,10 +82,18 @@ Deck::~Deck()
     
 }
 
+void Deck::shuffle()
+{
+    std::random_device rd;
+    std::mt19937 g(rd());
+
+    std::shuffle(deck_.begin(), deck_.end(), g);
+}
+
 void Deck::printDeck()
 {
     for(auto card : deck_){
-        std::cout << "Suit: " << card.getSuit() << " " << "Rank: " << card.getRank() << std::endl;
+        std::cout << card.getName() << " With the value of " << card.getValue() << std::endl;
     }
 }
 
