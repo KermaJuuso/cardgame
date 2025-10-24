@@ -11,10 +11,11 @@
 using namespace std;
 
 
-/* Imagine this as just a table the player sits to*/
 class Blackjack
 {
 public:
+    Blackjack(vector<shared_ptr<Player>> players);
+    virtual ~Blackjack();
 
 private:
     Dealer dealer_;

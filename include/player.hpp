@@ -12,6 +12,8 @@ class Player
 {
 public:
     Player(int balance = 50);
+    virtual ~Player();
+    
     void newCard(Card card);
 
     // Decisions

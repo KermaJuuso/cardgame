@@ -10,8 +10,10 @@ class Hand
 {
 public:
     Hand();
+    virtual ~Hand();
     void addCard(Card card);
     void clear();
+    vector<Card> getCards();
 
 private:
     vector<Card> cards_;

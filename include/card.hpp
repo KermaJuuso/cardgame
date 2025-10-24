@@ -40,6 +40,7 @@ class Card
 {
 public:
     Card(SUITS suit, RANKS rank);
+    virtual ~Card();
 
     void setSuit(SUITS s);
     void setRank(RANKS r);

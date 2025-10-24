@@ -5,3 +5,8 @@ Player::Player(int balance):
 {
     
 }
+
+Player::~Player()
+{
+    
+}

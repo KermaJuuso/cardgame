@@ -6,6 +6,11 @@ Card::Card(SUITS suit, RANKS rank):
    setValue(rank);
 }
 
+Card::~Card()
+{
+    
+}
+
 
 void Card::setSuit(SUITS s)
 {

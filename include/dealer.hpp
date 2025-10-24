@@ -8,6 +8,8 @@ using namespace std;
 class Dealer
 {
 public:
+    Dealer();
+    virtual ~Dealer();
 
 private:
     Hand hand_;
